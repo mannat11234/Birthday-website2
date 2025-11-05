@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Love</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      color: #333;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      width: 250px;
+      height: 450px;
+      border-radius: 100%;
+      object-fit: cover;
+      box-shadow: 0 0 20px pink;
+      margin: 30px 0;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 1s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .show-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2.5em;
+      color: #ff6b81;
+      margin-top: 50px;
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Happy Birthday My Love 💖</h1>
+
+  <img src= "https://uploads.onecompiler.io/43yn9772v/443sac36p/Snapchat-1922370004.jpg"  id="pic1">
+  <p id="text1">You make my world brighter every single day 🌸.. it's your special day today... just enjoy it so well ...nd ya "dur hoke bhi main Tere hmesha karib hu 🤭❤️😘</p>
+
+  <img src="https://uploads.onecompiler.io/43yn9772v/443sac36p/Screenshot_2024_1107_193115.jpg"  id="pic2">
+  <p id="text2">Your smile is my favorite thing in the world 😍meri lifeline ...my everything ❤️😘you means the world to me yr ...hum hamesha sath rhenge 🥹🥹</p>
+
+  <img src="https://uploads.onecompiler.io/43yn9772v/443sac36p/Snapchat-1329480140.jpg" id="pic3">
+  <p id="text3">Every moment with you feels magical ✨<.. you're the one whom i adore eso much ❤️ 😍<p>
+
+  <h2 id="final">I love you so much!! ❤️</h2>
+
+  <script>
+    const elements = [
+      {img: "pic1", text: "text1"},
+      {img: "pic2", text: "text2"},
+      {img: "pic3", text: "text3"},
+    ];
+
+    let delay = 1000;
+    elements.forEach((el, i) => {
+      setTimeout(() => {
+        document.getElementById(el.img).classList.add("show");
+        document.getElementById(el.text).classList.add("show-text");
+      }, delay);
+      delay += 2500;
+    });
+
+    setTimeout(() => {
+      document.getElementById("final").classList.add("visible");
+    }, delay + 1000);
+  </script>
+</body>
+</html>
